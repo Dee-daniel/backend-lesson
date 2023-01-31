@@ -1,0 +1,57 @@
+//dotenv (The dotenv package is a great way to keep passwords, API keys, and other sensitive data out of your code. 
+//It allows you to create environment variables in a . env file instead of putting them in your code. )
+//ex // console.log(process.env.MONGO_URI) in our env
+
+//type of data base
+//SQL databases are table based, while NoSQL databases can be document-oriented, 
+//key-value pairs, or graph structures. In a NoSQL database
+
+//Nosql 
+
+//Sql- they use document and collection and we can have a userbase collection and document collection
+//and document can come in key and value pairs and they do have specific id, they are not structured by default
+
+//schema- it allows how document should look like in our collection
+//A schema is a JSON object that defines the the structure and contents of your data
+
+// What is difference between Node.js and Express JS?
+//Express. js is a framework based on Node. js which is used for building web-application using approaches and principles of Node.
+//...
+//Node. js vs Express. js.
+//Feature	Express.js	Node.js
+//Level of features	More features than Node.js.	Fewer features.
+//Building Block	It is built on Node.js.	It is built on Google's V8 engine.
+
+const url = "";
+
+
+
+fetch (url)
+    .then((res) => {
+        res.json();
+    })
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((err)=> console.log(err));
+
+    //async await
+//but if we ant to change the default to request
+    const getData = async () => {
+        try{
+            const res = await fetch (url)
+            //const res = await fetch (url,{
+
+            //method:"POST"})
+            const data = await res.json();
+            console.log(data);
+        }catch (error) {
+            console.log(error);
+        }
+    }
+//employee-b naeme, role, age , -id, createdAt, updatedAt
+
+    //VIEWS
+    landing page - all employees => details page  which tells morea about a single employee, 
+    //we should have del functionality
+    //we should able to create - post to the servrer to add to the DB --> Homepage
